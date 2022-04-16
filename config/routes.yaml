@@ -2,6 +2,13 @@ controllers:
     resource: ../src/Controller/
     type: annotation
 
+homepage:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: dashboard
+        parmanent: true
+
 kernel:
     resource: ../src/Kernel.php
     type: annotation
